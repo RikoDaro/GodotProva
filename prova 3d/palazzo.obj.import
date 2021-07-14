@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/palazzo.obj-e8baba5add4647596a4cabf173ff1d7e.mesh"
+
+[deps]
+
+files=[ "res://.import/palazzo.obj-e8baba5add4647596a4cabf173ff1d7e.mesh" ]
+
+source_file="res://palazzo.obj"
+dest_files=[ "res://.import/palazzo.obj-e8baba5add4647596a4cabf173ff1d7e.mesh", "res://.import/palazzo.obj-e8baba5add4647596a4cabf173ff1d7e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
