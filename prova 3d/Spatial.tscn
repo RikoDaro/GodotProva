@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxShape" id=1]
 
 [node name="Spatial" type="Spatial"]
 
@@ -6,3 +8,7 @@
 
 [node name="Camera" type="Camera" parent="Node"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.27416 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.43221, 0, 5.75006 )
+shape = SubResource( 1 )
