@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/forte.obj-53b06cbb257aea4a93e2117ac571a1ec.mesh"
+
+[deps]
+
+files=[ "res://.import/forte.obj-53b06cbb257aea4a93e2117ac571a1ec.mesh" ]
+
+source_file="res://forte.obj"
+dest_files=[ "res://.import/forte.obj-53b06cbb257aea4a93e2117ac571a1ec.mesh", "res://.import/forte.obj-53b06cbb257aea4a93e2117ac571a1ec.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
