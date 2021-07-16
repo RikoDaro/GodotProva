@@ -1,12 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://palazzo.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://building.png" type="Texture" id=2]
-[ext_resource path="res://top.png" type="Texture" id=3]
-[ext_resource path="res://strada.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://sprite_4.png" type="Texture" id=5]
-[ext_resource path="res://sprite_3.png" type="Texture" id=6]
-[ext_resource path="res://sprite_7.png" type="Texture" id=7]
+[ext_resource path="res://palazzoBlender.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://UVbuilding.png" type="Texture" id=2]
+[ext_resource path="res://strada.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://sprite_4.png" type="Texture" id=4]
+[ext_resource path="res://sprite_3.png" type="Texture" id=5]
+[ext_resource path="res://sprite_7.png" type="Texture" id=6]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -17,38 +16,33 @@ albedo_color = Color( 0.243137, 0.243137, 0.243137, 1 )
 
 [sub_resource type="BoxShape" id=4]
 
-[sub_resource type="SpatialMaterial" id=5]
-
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=21]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="SpatialMaterial" id=7]
-albedo_texture = ExtResource( 3 )
-
 [sub_resource type="SpatialMaterial" id=8]
-albedo_texture = ExtResource( 5 )
+albedo_texture = ExtResource( 4 )
 
 [sub_resource type="SpatialMaterial" id=9]
 
 [sub_resource type="SpatialMaterial" id=10]
-albedo_texture = ExtResource( 5 )
+albedo_texture = ExtResource( 4 )
 
 [sub_resource type="SpatialMaterial" id=11]
 
 [sub_resource type="SpatialMaterial" id=12]
-albedo_texture = ExtResource( 6 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=13]
 
 [sub_resource type="SpatialMaterial" id=14]
-albedo_texture = ExtResource( 6 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=15]
 
 [sub_resource type="SpatialMaterial" id=16]
 
 [sub_resource type="SpatialMaterial" id=17]
-albedo_texture = ExtResource( 7 )
+albedo_texture = ExtResource( 6 )
 
 [sub_resource type="BoxShape" id=18]
 extents = Vector3( 12.5454, 1, 3.62148 )
@@ -84,162 +78,160 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.376665 )
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/destra/RigidBody"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/destra/RigidBody"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
-
-[node name="RigidBody2" type="StaticBody" parent="città/destra"]
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.376665 )
-
-[node name="CollisionShape" type="CollisionShape" parent="città/destra/RigidBody2"]
-transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
-shape = SubResource( 4 )
-
-[node name="palazzoOBJ" type="MeshInstance" parent="città/destra/RigidBody2"]
-mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
 
 [node name="RigidBody3" type="StaticBody" parent="città/destra"]
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -0.376665 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/destra/RigidBody3"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/destra/RigidBody3"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/destra/RigidBody3"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
+
+[node name="RigidBody2" type="StaticBody" parent="città/destra"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.376665 )
+
+[node name="CollisionShape" type="CollisionShape" parent="città/destra/RigidBody2"]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
+shape = SubResource( 4 )
+
+[node name="palazzoBlender" type="MeshInstance" parent="città/destra/RigidBody2"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 21 )
 
 [node name="RigidBody4" type="StaticBody" parent="città/destra"]
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.376665 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/destra/RigidBody4"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/destra/RigidBody4"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/destra/RigidBody4"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
 
 [node name="RigidBody5" type="StaticBody" parent="città/destra"]
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.376665 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/destra/RigidBody5"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/destra/RigidBody5"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/destra/RigidBody5"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
 
 [node name="RigidBody6" type="StaticBody" parent="città/destra"]
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.376665 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/destra/RigidBody6"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/destra/RigidBody6"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/destra/RigidBody6"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
 
 [node name="sinistra" type="Spatial" parent="città"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -4.6 )
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0.6, -2.4 )
 
 [node name="RigidBody" type="StaticBody" parent="città/sinistra"]
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4.62333 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/sinistra/RigidBody"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/sinistra/RigidBody"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/sinistra/RigidBody"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
-
-[node name="RigidBody2" type="StaticBody" parent="città/sinistra"]
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4.62333 )
-
-[node name="CollisionShape" type="CollisionShape" parent="città/sinistra/RigidBody2"]
-transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
-shape = SubResource( 4 )
-
-[node name="palazzoOBJ" type="MeshInstance" parent="città/sinistra/RigidBody2"]
-mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
 
 [node name="RigidBody3" type="StaticBody" parent="città/sinistra"]
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4.62333 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/sinistra/RigidBody3"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/sinistra/RigidBody3"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/sinistra/RigidBody3"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
+
+[node name="RigidBody2" type="StaticBody" parent="città/sinistra"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.376665 )
+
+[node name="CollisionShape" type="CollisionShape" parent="città/sinistra/RigidBody2"]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
+shape = SubResource( 4 )
+
+[node name="palazzoBlender" type="MeshInstance" parent="città/sinistra/RigidBody2"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 21 )
+
+[node name="RigidBody4" type="StaticBody" parent="città/sinistra"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.376665 )
+
+[node name="CollisionShape" type="CollisionShape" parent="città/sinistra/RigidBody4"]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
+shape = SubResource( 4 )
+
+[node name="palazzoBlender" type="MeshInstance" parent="città/sinistra/RigidBody4"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 21 )
 
 [node name="RigidBody5" type="StaticBody" parent="città/sinistra"]
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4.62333 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/sinistra/RigidBody5"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/sinistra/RigidBody5"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/sinistra/RigidBody5"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
 
 [node name="RigidBody6" type="StaticBody" parent="città/sinistra"]
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4.62333 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -0.376665 )
 
 [node name="CollisionShape" type="CollisionShape" parent="città/sinistra/RigidBody6"]
 transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 2, -1 )
 shape = SubResource( 4 )
 
-[node name="palazzoOBJ" type="MeshInstance" parent="città/sinistra/RigidBody6"]
+[node name="palazzoBlender" type="MeshInstance" parent="città/sinistra/RigidBody6"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 1, 2, -1 )
 mesh = ExtResource( 1 )
-material/0 = SubResource( 5 )
-material/1 = SubResource( 6 )
-material/2 = SubResource( 7 )
+material/0 = SubResource( 21 )
 
 [node name="strada" type="StaticBody" parent="città"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2 )
 
 [node name="strada" type="MeshInstance" parent="città/strada"]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
-mesh = ExtResource( 4 )
+mesh = ExtResource( 3 )
 material/0 = SubResource( 8 )
 material/1 = SubResource( 9 )
 material/2 = SubResource( 10 )
@@ -256,7 +248,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.172, -0.367063, -3.0273 )
 shape = SubResource( 18 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.2222e-008, -0.258819, 0.965926, -1.13133e-008, 0.965926, 0.258819, -1, 4.61853e-014, -4.37114e-008, 7.4, 2.5116, 2.1 )
+transform = Transform( -4.37114e-008, 0.421352, -0.906897, 0, 0.906897, 0.421352, 1, 1.84179e-008, -3.96417e-008, -7.8, 1.952, 0.7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, -7.8 )
